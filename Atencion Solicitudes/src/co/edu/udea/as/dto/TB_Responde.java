@@ -5,6 +5,7 @@ public class TB_Responde {
 	private String id;
 	private String nombre;
 	private String cargo;
+	
 	public String getId() {
 		return id;
 	}

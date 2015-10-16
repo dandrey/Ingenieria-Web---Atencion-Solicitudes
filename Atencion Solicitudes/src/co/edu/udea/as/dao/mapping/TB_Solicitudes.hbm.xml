@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUDES">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="IN_CODIGO" />
+            <generator class="assigned" />
+        </id>
+        <property name="tipoSolicitud" type="java.lang.String">
+            <column name="VR_TIPOSOLICITUD" />
+        </property>
+        <property name="fechaCreacion" type="java.util.Date">
+            <column name="DT_FECHACREACION" />
+        </property>
+        <property name="usuario" type="java.lang.Integer">
+            <column name="IN_USUARIO" />
+        </property>
+        <property name="producto" type="java.lang.String">
+            <column name="VR_PRODUCTO" />
+        </property>
+        <property name="filial" type="java.lang.Integer">
+            <column name="IN_FILIAL" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name="BL_ESTADO" />
+        </property>
+        <property name="respuesta" type="java.lang.Integer">
+            <column name="IN_RESPUESTA" />
+        </property>
+        <property name="texto" type="java.lang.String">
+            <column name="TX_TEXTO" />
+        </property>
+        <property name="encuesta" type="java.lang.Integer">
+            <column name="IN_ENCUESTA" />
+        </property>
+    </class>
+</hibernate-mapping>

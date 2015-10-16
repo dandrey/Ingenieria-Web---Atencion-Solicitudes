@@ -4,6 +4,7 @@ public class TB_TipoSolicitud {
 	
 	private String codigo;
 	private String solicitud;
+	
 	public String getCodigo() {
 		return codigo;
 	}

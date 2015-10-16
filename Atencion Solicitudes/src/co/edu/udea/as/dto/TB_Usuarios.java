@@ -2,15 +2,16 @@ package co.edu.udea.as.dto;
 
 public class TB_Usuarios {
 	
-	private int documento;
+	private Integer documento;
 	private String nombres;
 	private String apellidos;
 	private String correo;
-	private int telefono;
-	public int getDocumento() {
+	private Integer telefono;
+	
+	public Integer getDocumento() {
 		return documento;
 	}
-	public void setDocumento(int documento) {
+	public void setDocumento(Integer documento) {
 		this.documento = documento;
 	}
 	public String getNombres() {
@@ -31,10 +32,10 @@ public class TB_Usuarios {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	public int getTelefono() {
+	public Integer getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(Integer telefono) {
 		this.telefono = telefono;
 	}
 }

@@ -9,27 +9,27 @@ import java.util.Date;
  */
 public class TB_Solicitudes {
 	
-	private int codigo;
+	private Integer codigo;
 	private String tipoSolicitud;
 	private Date fechaCreacion;
-	private int usuario;
+	private Integer usuario;
 	private String producto;
-	private int filial;
+	private Integer filial;
 	private boolean estado;
-	private int respuesta;
+	private Integer respuesta;
 	private String texto;
-	private int encuesta;
+	private Integer encuesta;
 	
 	/**
 	 * @return the codigo
 	 */
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 	/**
 	 * @param codigo the codigo to set
 	 */
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 	/**
@@ -59,13 +59,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the usuario
 	 */
-	public int getUsuario() {
+	public Integer getUsuario() {
 		return usuario;
 	}
 	/**
 	 * @param usuario the usuario to set
 	 */
-	public void setUsuario(int usuario) {
+	public void setUsuario(Integer usuario) {
 		this.usuario = usuario;
 	}
 	/**
@@ -83,13 +83,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the filial
 	 */
-	public int getFilial() {
+	public Integer getFilial() {
 		return filial;
 	}
 	/**
 	 * @param filial the filial to set
 	 */
-	public void setFilial(int filial) {
+	public void setFilial(Integer filial) {
 		this.filial = filial;
 	}
 	/**
@@ -107,13 +107,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the respuesta
 	 */
-	public int getRespuesta() {
+	public Integer getRespuesta() {
 		return respuesta;
 	}
 	/**
 	 * @param respuesta the respuesta to set
 	 */
-	public void setRespuesta(int respuesta) {
+	public void setRespuesta(Integer respuesta) {
 		this.respuesta = respuesta;
 	}
 	/**
@@ -131,13 +131,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the encuesta
 	 */
-	public int getEncuesta() {
+	public Integer getEncuesta() {
 		return encuesta;
 	}
 	/**
 	 * @param encuesta the encuesta to set
 	 */
-	public void setEncuesta(int encuesta) {
+	public void setEncuesta(Integer encuesta) {
 		this.encuesta = encuesta;
 	}
 }

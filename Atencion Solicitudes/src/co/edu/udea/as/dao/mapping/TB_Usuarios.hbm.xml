@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.as.dto.TB_Usuarios" table="TB_USUARIOS">
+    	<id name="documento" type="java.lang.Integer">
+    		<column name="IN_DOCUMENTO" />
+    		<generator class="assigned" />
+    	</id>
+        <property name="apellidos" type="java.lang.String">
+            <column name="VR_APELLIDOS" />
+        </property>
+        <property name="nombres" type="java.lang.String">
+            <column name="VR_NOMBRES" />
+        </property>
+        <property name="correo" type="java.lang.String">
+            <column name="VR_CORREO" />
+        </property>
+        <property name="telefono" type="java.lang.Integer">
+            <column name="IN_TELEFONO" />
+        </property>
+    </class>
+</hibernate-mapping>

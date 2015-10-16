@@ -2,13 +2,14 @@ package co.edu.udea.as.dto;
 
 public class TB_Filiales {
 	
-	private int codigo;
+	private Integer codigo;
 	private String nombre;
 	private String direccion;
-	public int getCodigo() {
+	
+	public Integer getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 	public String getNombre() {

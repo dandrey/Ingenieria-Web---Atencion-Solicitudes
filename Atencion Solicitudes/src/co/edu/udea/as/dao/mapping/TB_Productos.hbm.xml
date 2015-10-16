@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.as.dto.TB_Productos" table="TB_PRODUCTOS">
+        <id name="referencia" type="java.lang.String">
+            <column name="VR_REFERENCIA" />
+            <generator class="assigned" />
+        </id>
+        <property name="producto" type="java.lang.String">
+            <column name="VR_PRODUCTO" />
+        </property>
+    </class>
+</hibernate-mapping>

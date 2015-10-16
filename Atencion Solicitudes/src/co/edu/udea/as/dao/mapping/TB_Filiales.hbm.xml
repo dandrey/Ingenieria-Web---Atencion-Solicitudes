@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.edu.udea.as.dto.TB_Filiales" table="TB_FILIALES">
+        <id name="codigo" type="java.lang.Integer">
+            <column name="IN_CODIGO" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="VR_NOMBRE" />
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="VR_DIRECCION" />
+        </property>
+    </class>
+</hibernate-mapping>

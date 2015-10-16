@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class TB_Notificacion {
 	
-	private int notifiacion;
-	private int solicitud;
+	private Integer notifiacion;
+	private Integer solicitud;
 	private Date fechaNotifiacion;
 	
-	public int getNotifiacion() {
+	public Integer getNotifiacion() {
 		return notifiacion;
 	}
-	public void setNotifiacion(int notifiacion) {
+	public void setNotifiacion(Integer notifiacion) {
 		this.notifiacion = notifiacion;
 	}
-	public int getSolicitud() {
+	public Integer getSolicitud() {
 		return solicitud;
 	}
-	public void setSolicitud(int solicitud) {
+	public void setSolicitud(Integer solicitud) {
 		this.solicitud = solicitud;
 	}
 	public Date getFechaNotifiacion() {

@@ -4,14 +4,15 @@ import java.util.Date;
 
 public class TB_Respuesta {
 	
-	private int id;
+	private Integer id;
 	private String respuesta;
 	private Date fecharespuesta;
 	private String reponsable;
-	public int getId() {
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getRespuesta() {

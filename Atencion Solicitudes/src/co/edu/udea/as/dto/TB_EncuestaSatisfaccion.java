@@ -2,20 +2,20 @@ package co.edu.udea.as.dto;
 
 public class TB_EncuestaSatisfaccion {
 	
-	private int codigo;
-	private int solicitud;
+	private Integer codigo;
+	private Integer solicitud;
 	private String encuesta;
 	
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
-	public int getSolicitud() {
+	public Integer getSolicitud() {
 		return solicitud;
 	}
-	public void setSolicitud(int solicitud) {
+	public void setSolicitud(Integer solicitud) {
 		this.solicitud = solicitud;
 	}
 	public String getEncuesta() {
