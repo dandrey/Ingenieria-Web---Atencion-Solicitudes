@@ -5,20 +5,23 @@
 <hibernate-mapping>
     <class name="co.edu.udea.as.dto.TB_Usuarios" table="TB_USUARIOS">
     	<id name="documento" type="java.lang.Integer">
-    		<column name="IN_DOCUMENTO" />
+    		<column name="IN_DOCUMENTO" precision="10"/>
     		<generator class="assigned" />
     	</id>
-        <property name="apellidos" type="java.lang.String">
-            <column name="VR_APELLIDOS" />
-        </property>
         <property name="nombres" type="java.lang.String">
-            <column name="VR_NOMBRES" />
+            <column name="VR_NOMBRES" length="35" not-null="true"/>
+        </property>
+        <property name="apellidos" type="java.lang.String">
+            <column name="VR_APELLIDOS" length="35" not-null="true"/>
         </property>
         <property name="correo" type="java.lang.String">
-            <column name="VR_CORREO" />
+            <column name="VR_CORREO" length="50" not-null="true"/>
         </property>
         <property name="telefono" type="java.lang.Integer">
-            <column name="IN_TELEFONO" />
+            <column name="IN_TELEFONO" precision="11" not-null="false"/>
+        </property>
+        <property name="estado" type="boolean">
+            <column name="BL_ESTADO" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>

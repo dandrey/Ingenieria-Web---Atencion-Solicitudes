@@ -7,6 +7,7 @@ public class TB_Usuarios {
 	private String apellidos;
 	private String correo;
 	private Integer telefono;
+	private Boolean estado;
 	
 	public Integer getDocumento() {
 		return documento;
@@ -37,5 +38,11 @@ public class TB_Usuarios {
 	}
 	public void setTelefono(Integer telefono) {
 		this.telefono = telefono;
+	}
+	public Boolean getEstado() {
+		return estado;
+	}
+	public void setEstado(Boolean estado) {
+		this.estado = estado;
 	}
 }

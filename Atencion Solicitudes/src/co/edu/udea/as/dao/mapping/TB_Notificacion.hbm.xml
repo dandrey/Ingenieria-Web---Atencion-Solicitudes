@@ -5,14 +5,14 @@
 <hibernate-mapping>
     <class name="co.edu.udea.as.dto.TB_Notificacion" table="TB_NOTIFICACION">
         <id name="notifiacion" type="java.lang.Integer">
-            <column name="IN_NOTIFIACION" />
-            <generator class="assigned" />
+            <column name="IN_NOTIFIACION"/>
+            <generator class="identity" />
         </id>
         <property name="solicitud" type="java.lang.Integer">
-            <column name="IN_SOLICITUD" />
+            <column name="IN_SOLICITUD" not-null="true"/>
         </property>
         <property name="fechaNotifiacion" type="java.util.Date">
-            <column name="DT_FECHANOTIFIACION" />
+            <column name="DT_FECHANOTIFIACION" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

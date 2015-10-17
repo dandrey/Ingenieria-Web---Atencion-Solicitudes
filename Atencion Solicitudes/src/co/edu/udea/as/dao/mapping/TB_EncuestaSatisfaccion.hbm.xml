@@ -6,13 +6,13 @@
     <class name="co.edu.udea.as.dto.TB_EncuestaSatisfaccion" table="TB_ENCUESTASATISFACCION">
         <id name="codigo" type="java.lang.Integer">
             <column name="IN_CODIGO" />
-            <generator class="assigned" />
+            <generator class="identity"/>
         </id>
         <property name="solicitud" type="java.lang.Integer">
-            <column name="IN_SOLICITUD" />
+            <column name="IN_SOLICITUD" not-null="true"/>
         </property>
         <property name="encuesta" type="java.lang.String">
-            <column name="VR_ENCUESTA" />
+            <column name="VR_ENCUESTA" not-null="true" length="100"/>
         </property>
     </class>
 </hibernate-mapping>

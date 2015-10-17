@@ -6,16 +6,16 @@
     <class name="co.edu.udea.as.dto.TB_Respuesta" table="TB_RESPUESTA">
         <id name="id" type="java.lang.Integer">
             <column name="IN_ID" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="respuesta" type="java.lang.String">
-            <column name="TX_RESPUESTA" />
+            <column name="TX_RESPUESTA" length="1000" not-null="true"/>
         </property>
         <property name="fecharespuesta" type="java.util.Date">
-            <column name="DT_FECHARESPUESTA" />
+            <column name="DT_FECHARESPUESTA" not-null="true"/>
         </property>
         <property name="reponsable" type="java.lang.String">
-            <column name="VR_REPONSABLE" />
+            <column name="VR_REPONSABLE" length="10" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

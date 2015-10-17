@@ -6,34 +6,34 @@
     <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUDES">
         <id name="codigo" type="java.lang.Integer">
             <column name="IN_CODIGO" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="tipoSolicitud" type="java.lang.String">
-            <column name="VR_TIPOSOLICITUD" />
+            <column name="VR_TIPOSOLICITUD" length="10" not-null="true"/>
         </property>
         <property name="fechaCreacion" type="java.util.Date">
-            <column name="DT_FECHACREACION" />
+            <column name="DT_FECHACREACION" not-null="true"/>
         </property>
         <property name="usuario" type="java.lang.Integer">
-            <column name="IN_USUARIO" />
+            <column name="IN_USUARIO" precision="10" not-null="true"/>
         </property>
         <property name="producto" type="java.lang.String">
-            <column name="VR_PRODUCTO" />
+            <column name="VR_PRODUCTO" length="10" not-null="true"/>
         </property>
         <property name="filial" type="java.lang.Integer">
-            <column name="IN_FILIAL" />
+            <column name="IN_FILIAL" precision="11" not-null="true"/>
         </property>
         <property name="estado" type="boolean">
-            <column name="BL_ESTADO" />
+            <column name="BL_ESTADO" length="1"/>
         </property>
         <property name="respuesta" type="java.lang.Integer">
-            <column name="IN_RESPUESTA" />
+            <column name="IN_RESPUESTA" not-null="false"/>
         </property>
         <property name="texto" type="java.lang.String">
-            <column name="TX_TEXTO" />
+            <column name="TX_TEXTO" length="1000" not-null="true"/>
         </property>
         <property name="encuesta" type="java.lang.Integer">
-            <column name="IN_ENCUESTA" />
+            <column name="IN_ENCUESTA" not-null="false"/>
         </property>
     </class>
 </hibernate-mapping>

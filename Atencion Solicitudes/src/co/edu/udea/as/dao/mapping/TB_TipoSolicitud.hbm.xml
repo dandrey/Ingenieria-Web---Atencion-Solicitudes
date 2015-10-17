@@ -5,11 +5,11 @@
 <hibernate-mapping>
     <class name="co.edu.udea.as.dto.TB_TipoSolicitud" table="TB_TIPOSOLICITUD">
         <id name="codigo" type="java.lang.String">
-            <column name="VR_CODIGO" />
+            <column name="VR_CODIGO" length="10"/>
             <generator class="assigned" />
         </id>
         <property name="solicitud" type="java.lang.String">
-            <column name="VR_SOLICITUD" />
+            <column name="VR_SOLICITUD" length="10" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

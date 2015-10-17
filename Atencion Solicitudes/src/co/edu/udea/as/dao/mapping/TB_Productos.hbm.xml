@@ -9,7 +9,7 @@
             <generator class="assigned" />
         </id>
         <property name="producto" type="java.lang.String">
-            <column name="VR_PRODUCTO" />
+            <column name="VR_PRODUCTO" length="100" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>
