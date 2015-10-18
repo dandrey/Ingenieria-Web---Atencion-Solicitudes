@@ -11,10 +11,10 @@ public interface TB_NotificacionDAO {
 	
 	public TB_Notificacion obtener(Integer codigo) throws ASDaoException;
 	
-	public TB_Notificacion agregar(TB_Notificacion notificacion) throws ASDaoException;
+	public void agregar(TB_Notificacion notificacion) throws ASDaoException;
 	
-	public TB_Notificacion actualizar(TB_Notificacion notificacion) throws ASDaoException;
+	public void actualizar(TB_Notificacion notificacion) throws ASDaoException;
 	
-	public TB_Notificacion borrar(Integer codigo) throws ASDaoException;
+	public void borrar(Integer codigo) throws ASDaoException;
 
 }

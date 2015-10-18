@@ -5,7 +5,14 @@ public class TB_Filiales {
 	private Integer codigo;
 	private String nombre;
 	private String direccion;
+	private boolean estado;
 	
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
 	public Integer getCodigo() {
 		return codigo;
 	}
@@ -24,5 +31,4 @@ public class TB_Filiales {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-
 }

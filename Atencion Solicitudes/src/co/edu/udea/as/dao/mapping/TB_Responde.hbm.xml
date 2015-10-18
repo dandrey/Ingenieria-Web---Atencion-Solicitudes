@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="co.edu.udea.as.dto.TB_Responde" table="TB_RESPONDE">
         <id name="id" type="java.lang.String">
@@ -9,10 +9,13 @@
             <generator class="assigned" />
         </id>
         <property name="nombre" type="java.lang.String">
-            <column name="VR_NOMBRE" length="70"/ not-null="true">
+            <column name="VR_NOMBRE" length="70" not-null="true"/>
         </property>
         <property name="cargo" type="java.lang.String">
             <column name="VR_CARGO" length="35" not-null="true"/>
+        </property>
+        <property name="estado" type="boolean">
+            <column name="BL_ESTADO" precision="1" not-null="false" />
         </property>
     </class>
 </hibernate-mapping>

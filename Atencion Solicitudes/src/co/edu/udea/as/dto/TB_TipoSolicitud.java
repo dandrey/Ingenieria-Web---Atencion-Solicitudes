@@ -17,5 +17,4 @@ public class TB_TipoSolicitud {
 	public void setSolicitud(String solicitud) {
 		this.solicitud = solicitud;
 	}
-
 }

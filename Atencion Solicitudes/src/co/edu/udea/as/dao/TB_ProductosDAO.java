@@ -11,10 +11,10 @@ public List<TB_Productos> lista() throws ASDaoException;
 	
 	public TB_Productos obtener(String referencia) throws ASDaoException;
 	
-	public TB_Productos agregar(TB_Productos producto) throws ASDaoException;
+	public void agregar(TB_Productos producto) throws ASDaoException;
 	
-	public TB_Productos actualizar(TB_Productos producto) throws ASDaoException;
+	public void actualizar(TB_Productos producto) throws ASDaoException;
 	
-	public TB_Productos borrar(String referencia) throws ASDaoException;
+	public void borrar(String referencia) throws ASDaoException;
 
 }

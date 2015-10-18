@@ -10,15 +10,14 @@ import java.util.Date;
 public class TB_Solicitudes {
 	
 	private Integer codigo;
-	private String tipoSolicitud;
+	private TB_TipoSolicitud tipoSolicitud;
 	private Date fechaCreacion;
-	private Integer usuario;
-	private String producto;
-	private Integer filial;
+	private TB_Productos producto;
+	private TB_Filiales filial;
 	private boolean estado;
-	private Integer respuesta;
+	private TB_Respuesta respuesta;
 	private String texto;
-	private Integer encuesta;
+	private TB_EncuestaSatisfaccion encuesta;
 	
 	/**
 	 * @return the codigo
@@ -35,13 +34,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the tipoSolicitud
 	 */
-	public String getTipoSolicitud() {
+	public TB_TipoSolicitud getTipoSolicitud() {
 		return tipoSolicitud;
 	}
 	/**
 	 * @param tipoSolicitud the tipoSolicitud to set
 	 */
-	public void setTipoSolicitud(String tipoSolicitud) {
+	public void setTipoSolicitud(TB_TipoSolicitud tipoSolicitud) {
 		this.tipoSolicitud = tipoSolicitud;
 	}
 	/**
@@ -57,39 +56,27 @@ public class TB_Solicitudes {
 		this.fechaCreacion = fechaCreacion;
 	}
 	/**
-	 * @return the usuario
-	 */
-	public Integer getUsuario() {
-		return usuario;
-	}
-	/**
-	 * @param usuario the usuario to set
-	 */
-	public void setUsuario(Integer usuario) {
-		this.usuario = usuario;
-	}
-	/**
 	 * @return the producto
 	 */
-	public String getProducto() {
+	public TB_Productos getProducto() {
 		return producto;
 	}
 	/**
 	 * @param producto the producto to set
 	 */
-	public void setProducto(String producto) {
+	public void setProducto(TB_Productos producto) {
 		this.producto = producto;
 	}
 	/**
 	 * @return the filial
 	 */
-	public Integer getFilial() {
+	public TB_Filiales getFilial() {
 		return filial;
 	}
 	/**
 	 * @param filial the filial to set
 	 */
-	public void setFilial(Integer filial) {
+	public void setFilial(TB_Filiales filial) {
 		this.filial = filial;
 	}
 	/**
@@ -107,13 +94,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the respuesta
 	 */
-	public Integer getRespuesta() {
+	public TB_Respuesta getRespuesta() {
 		return respuesta;
 	}
 	/**
 	 * @param respuesta the respuesta to set
 	 */
-	public void setRespuesta(Integer respuesta) {
+	public void setRespuesta(TB_Respuesta respuesta) {
 		this.respuesta = respuesta;
 	}
 	/**
@@ -131,13 +118,13 @@ public class TB_Solicitudes {
 	/**
 	 * @return the encuesta
 	 */
-	public Integer getEncuesta() {
+	public TB_EncuestaSatisfaccion getEncuesta() {
 		return encuesta;
 	}
 	/**
 	 * @param encuesta the encuesta to set
 	 */
-	public void setEncuesta(Integer encuesta) {
+	public void setEncuesta(TB_EncuestaSatisfaccion encuesta) {
 		this.encuesta = encuesta;
 	}
 }

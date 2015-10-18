@@ -11,10 +11,10 @@ public interface TB_EncuestaSatisfaccionDAO {
 	
 	public TB_EncuestaSatisfaccion obtener(Integer codigo) throws ASDaoException;
 	
-	public TB_EncuestaSatisfaccion agregar(TB_EncuestaSatisfaccion encuesta) throws ASDaoException;
+	public void agregar(TB_EncuestaSatisfaccion encuesta) throws ASDaoException;
 	
-	public TB_EncuestaSatisfaccion actualizar(TB_EncuestaSatisfaccion encuesta) throws ASDaoException;
+	public void actualizar(TB_EncuestaSatisfaccion encuesta) throws ASDaoException;
 	
-	public TB_EncuestaSatisfaccion borrar(Integer codigo) throws ASDaoException;
+	public void borrar(Integer codigo) throws ASDaoException;
 
 }

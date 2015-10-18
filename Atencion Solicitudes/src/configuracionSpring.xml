@@ -9,10 +9,11 @@
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql//localhost:3306/clase"></property>
-		<property name="username" value="atencionsolicitudes"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/atencionsolicitudes"></property>
+		<property name="username" value="root"></property>
 		<property name="password" value=""></property>
 	</bean>
+	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="mappingResources">
@@ -24,7 +25,7 @@
 				<value>co/edu/udea/as/dao/mapping/TB_Responde.hbm.xml</value>
 				<value>co/edu/udea/as/dao/mapping/TB_Respuesta.hbm.xml</value>
 				<value>co/edu/udea/as/dao/mapping/TB_Solicitudes.hbm.xml</value>
-				<value>co/edu/udea/as/dao/mapping/TB_TipoSolicitudes.hbm.xml</value>
+				<value>co/edu/udea/as/dao/mapping/TB_TipoSolicitud.hbm.xml</value>
 				<value>co/edu/udea/as/dao/mapping/TB_Usuarios.hbm.xml</value>
 			</list>
 		</property>
@@ -42,6 +43,40 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
+	<bean id="tb_usuariosDao" class="co.edu.udea.as.dao.hibernate.TB_UsuariosDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
+	<bean id="tb_filialesDao" class="co.edu.udea.as.dao.hibernate.TB_FilialesDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_productosDao" class="co.edu.udea.as.dao.hibernate.TB_ProductosDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_encuestaDao" class="co.edu.udea.as.dao.hibernate.TB_EncuestaSatisfaccionDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_notificacionesDao" class="co.edu.udea.as.dao.hibernate.TB_NotificacionDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_respondeDao" class="co.edu.udea.as.dao.hibernate.TB_RespondeDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_respuestaDao" class="co.edu.udea.as.dao.hibernate.TB_RespuestaDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_tiposolicitudDao" class="co.edu.udea.as.dao.hibernate.TB_TipoSolicitudDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="tb_solicitudesDao" class="co.edu.udea.as.dao.hibernate.TB_SolicitudesDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 
 </beans>

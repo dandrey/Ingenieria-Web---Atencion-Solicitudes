@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_Usuarios" table="TB_USUARIOS">
-    	<id name="documento" type="java.lang.Integer">
-    		<column name="IN_DOCUMENTO" precision="10"/>
-    		<generator class="assigned" />
-    	</id>
+    <class name="co.edu.udea.as.dto.TB_Usuarios" table="TB_USUARIOS" lazy="false">
+        <id name="documento" type="java.lang.Integer">
+            <column name="IN_DOCUMENTO" precision="10" not-null="true"/>
+            <generator class="assigned" />
+        </id>
         <property name="nombres" type="java.lang.String">
             <column name="VR_NOMBRES" length="35" not-null="true"/>
         </property>
@@ -20,8 +20,11 @@
         <property name="telefono" type="java.lang.Integer">
             <column name="IN_TELEFONO" precision="11" not-null="false"/>
         </property>
-        <property name="estado" type="boolean">
-            <column name="BL_ESTADO" not-null="false"/>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="BL_ESTADO" precision="1" not-null="false"/>
         </property>
+        <many-to-one name="solicitud" class="co.edu.udea.as.dto.TB_Solicitudes" fetch="join">
+            <column name="IN_SOLICITUD" precision="11" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>

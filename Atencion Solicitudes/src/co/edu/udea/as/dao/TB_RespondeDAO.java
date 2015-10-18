@@ -11,10 +11,10 @@ public interface TB_RespondeDAO {
 	
 	public TB_Responde obtener(String id) throws ASDaoException;
 	
-	public TB_Responde agregar(TB_Responde responde) throws ASDaoException;
+	public void agregar(TB_Responde responde) throws ASDaoException;
 	
-	public TB_Responde actualizar(TB_Responde responde) throws ASDaoException;
+	public void actualizar(TB_Responde responde) throws ASDaoException;
 	
-	public TB_Responde borrar(String id) throws ASDaoException;
+	public void borrar(String id) throws ASDaoException;
 
 }

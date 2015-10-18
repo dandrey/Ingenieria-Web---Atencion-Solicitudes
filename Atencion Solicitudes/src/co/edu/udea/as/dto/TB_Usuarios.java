@@ -8,6 +8,7 @@ public class TB_Usuarios {
 	private String correo;
 	private Integer telefono;
 	private Boolean estado;
+	private TB_Solicitudes solicitud;
 	
 	public Integer getDocumento() {
 		return documento;
@@ -44,5 +45,11 @@ public class TB_Usuarios {
 	}
 	public void setEstado(Boolean estado) {
 		this.estado = estado;
+	}
+	public TB_Solicitudes getSolicitud() {
+		return solicitud;
+	}
+	public void setSolicitud(TB_Solicitudes solicitud) {
+		this.solicitud = solicitud;
 	}
 }

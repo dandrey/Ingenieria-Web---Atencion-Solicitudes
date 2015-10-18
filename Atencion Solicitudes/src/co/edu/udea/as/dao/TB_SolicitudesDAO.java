@@ -11,10 +11,10 @@ public interface TB_SolicitudesDAO {
 
 	public TB_Solicitudes obtener(Integer codigo) throws ASDaoException;
 
-	public TB_Solicitudes agregar(TB_Solicitudes solicitud) throws ASDaoException;
+	public void agregar(TB_Solicitudes solicitud) throws ASDaoException;
 
-	public TB_Solicitudes actualizar(TB_Solicitudes solicitud) throws ASDaoException;
+	public void actualizar(TB_Solicitudes solicitud) throws ASDaoException;
 
-	public TB_Solicitudes borrar(Integer codigo) throws ASDaoException;
+	public void borrar(Integer codigo) throws ASDaoException;
 
 }

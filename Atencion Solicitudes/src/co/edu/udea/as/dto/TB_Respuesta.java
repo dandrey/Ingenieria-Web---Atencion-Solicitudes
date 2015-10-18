@@ -7,7 +7,7 @@ public class TB_Respuesta {
 	private Integer id;
 	private String respuesta;
 	private Date fecharespuesta;
-	private String reponsable;
+	private TB_Responde reponsable;
 	
 	public Integer getId() {
 		return id;
@@ -27,10 +27,10 @@ public class TB_Respuesta {
 	public void setFecharespuesta(Date fecharespuesta) {
 		this.fecharespuesta = fecharespuesta;
 	}
-	public String getReponsable() {
+	public TB_Responde getReponsable() {
 		return reponsable;
 	}
-	public void setReponsable(String reponsable) {
+	public void setReponsable(TB_Responde reponsable) {
 		this.reponsable = reponsable;
 	}
 

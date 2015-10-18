@@ -11,10 +11,10 @@ public interface TB_UsuariosDAO {
 	
 	public TB_Usuarios obtener(Integer documento) throws ASDaoException;
 	
-	public TB_Usuarios agregar(TB_Usuarios usuario) throws ASDaoException;
+	public void agregar(TB_Usuarios usuario) throws ASDaoException;
 	
-	public TB_Usuarios actualizar(TB_Usuarios usuario) throws ASDaoException;
+	public void actualizar(TB_Usuarios usuario) throws ASDaoException;
 	
-	public TB_Usuarios borrar(Integer documento) throws ASDaoException;
+	public void borrar(Integer documento) throws ASDaoException;
 
 }

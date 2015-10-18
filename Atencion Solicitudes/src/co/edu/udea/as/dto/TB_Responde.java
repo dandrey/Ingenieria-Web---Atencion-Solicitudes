@@ -5,7 +5,14 @@ public class TB_Responde {
 	private String id;
 	private String nombre;
 	private String cargo;
+	private boolean estado;
 	
+	public boolean isEstado() {
+		return estado;
+	}
+	public void setEstado(boolean estado) {
+		this.estado = estado;
+	}
 	public String getId() {
 		return id;
 	}
@@ -24,5 +31,4 @@ public class TB_Responde {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-
 }

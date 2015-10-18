@@ -11,10 +11,12 @@ public interface TB_FilialesDAO {
 	
 	public TB_Filiales obtener(Integer codigo) throws ASDaoException;
 	
-	public TB_Filiales agregar(TB_Filiales filial) throws ASDaoException;
+	public void agregar(TB_Filiales filial) throws ASDaoException;
 	
-	public TB_Filiales actualizar(TB_Filiales filial) throws ASDaoException;
+	public void actualizar(TB_Filiales filial) throws ASDaoException;
 	
-	public TB_Filiales borrar(Integer codigo) throws ASDaoException;
+	public void borrar(Integer codigo) throws ASDaoException;
+	
+	public void updateEstado(Integer codigo, Boolean estado) throws ASDaoException;
 
 }

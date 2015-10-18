@@ -11,10 +11,10 @@ public interface TB_TipoSolicitudDAO {
 	
 	public TB_TipoSolicitud obtener(String codigo) throws ASDaoException;
 	
-	public TB_TipoSolicitud agregar(TB_TipoSolicitud tipoSol) throws ASDaoException;
+	public void agregar(TB_TipoSolicitud tipoSol) throws ASDaoException;
 	
-	public TB_TipoSolicitud actualizar(TB_TipoSolicitud tipoSol) throws ASDaoException;
+	public void actualizar(TB_TipoSolicitud tipoSol) throws ASDaoException;
 	
-	public TB_TipoSolicitud borrar(String codigo) throws ASDaoException;
+	public void borrar(String codigo) throws ASDaoException;
 
 }

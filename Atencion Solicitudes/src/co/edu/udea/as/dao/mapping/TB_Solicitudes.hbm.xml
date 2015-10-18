@@ -1,39 +1,36 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 14/10/2015 09:31:08 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUDES">
+    <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUD">
         <id name="codigo" type="java.lang.Integer">
-            <column name="IN_CODIGO" />
+            <column name="IN_CODIGO" precision="11" />
             <generator class="identity" />
         </id>
-        <property name="tipoSolicitud" type="java.lang.String">
-            <column name="VR_TIPOSOLICITUD" length="10" not-null="true"/>
-        </property>
+        <many-to-one name="tipoSolicitud" class="co.edu.udea.as.dto.TB_TipoSolicitud" fetch="join">
+            <column name="VR_TIPOSOL" length="10" not-null="true"/>
+        </many-to-one>
         <property name="fechaCreacion" type="java.util.Date">
             <column name="DT_FECHACREACION" not-null="true"/>
         </property>
-        <property name="usuario" type="java.lang.Integer">
-            <column name="IN_USUARIO" precision="10" not-null="true"/>
-        </property>
-        <property name="producto" type="java.lang.String">
+        <many-to-one name="producto" class="co.edu.udea.as.dto.TB_Productos" fetch="join">
             <column name="VR_PRODUCTO" length="10" not-null="true"/>
-        </property>
-        <property name="filial" type="java.lang.Integer">
+        </many-to-one>
+        <many-to-one name="filial" class="co.edu.udea.as.dto.TB_Filiales" fetch="join">
             <column name="IN_FILIAL" precision="11" not-null="true"/>
-        </property>
+        </many-to-one>
         <property name="estado" type="boolean">
-            <column name="BL_ESTADO" length="1"/>
+            <column name="BL_ESTADO" precision="1" not-null="false"/>
         </property>
-        <property name="respuesta" type="java.lang.Integer">
-            <column name="IN_RESPUESTA" not-null="false"/>
-        </property>
+        <many-to-one name="respuesta" class="co.edu.udea.as.dto.TB_Respuesta" fetch="join">
+            <column name="IN_RESPUESTA" precision="11" not-null="false"/>
+        </many-to-one>
         <property name="texto" type="java.lang.String">
             <column name="TX_TEXTO" length="1000" not-null="true"/>
         </property>
-        <property name="encuesta" type="java.lang.Integer">
-            <column name="IN_ENCUESTA" not-null="false"/>
-        </property>
+        <many-to-one name="encuesta" class="co.edu.udea.as.dto.TB_EncuestaSatisfaccion" fetch="join">
+            <column name="IN_ENCUESTA" precision="11" not-null="false"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>
