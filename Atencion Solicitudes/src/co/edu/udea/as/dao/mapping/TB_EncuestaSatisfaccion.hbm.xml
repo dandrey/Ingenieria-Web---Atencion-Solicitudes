@@ -8,7 +8,7 @@
             <column name="IN_CODIGO" precision="11"/>
             <generator class="identity" />
         </id>
-        <many-to-one name="solicitud" class="co.edu.udea.as.dto.TB_Notificacion" fetch="join">
+        <many-to-one name="solicitud" class="co.edu.udea.as.dto.TB_Notificacion">
             <column name="IN_SOLICITUD" precision="11" not-null="true"/>
         </many-to-one>
         <property name="encuesta" type="java.lang.String">

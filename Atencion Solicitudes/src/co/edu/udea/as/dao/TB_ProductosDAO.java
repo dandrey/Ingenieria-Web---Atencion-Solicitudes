@@ -15,6 +15,6 @@ public List<TB_Productos> lista() throws ASDaoException;
 	
 	public void actualizar(TB_Productos producto) throws ASDaoException;
 	
-	public void borrar(String referencia) throws ASDaoException;
+	public void borrar(TB_Productos producto) throws ASDaoException;
 
 }

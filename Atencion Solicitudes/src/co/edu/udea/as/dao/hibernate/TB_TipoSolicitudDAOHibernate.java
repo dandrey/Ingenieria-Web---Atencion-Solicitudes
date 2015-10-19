@@ -17,11 +17,11 @@ public class TB_TipoSolicitudDAOHibernate extends HibernateDaoSupport implements
 	@Override
 	public List<TB_TipoSolicitud> lista() throws ASDaoException {
 		List<TB_TipoSolicitud> tipoSol = new ArrayList<TB_TipoSolicitud>();
-		
+
 		try {
 			Session session = this.getSessionFactory().openSession();
 			Criteria criteria = session.createCriteria(TB_TipoSolicitud.class);
-			
+
 			tipoSol = criteria.list();
 		} catch (HibernateException e) {
 			throw new ASDaoException(e);
@@ -51,8 +51,9 @@ public class TB_TipoSolicitudDAOHibernate extends HibernateDaoSupport implements
 		try{
 			session = this.getSessionFactory().openSession();
 
-			tx = session.beginTransaction();
 			session.save(tipoSol);
+			tx = session.beginTransaction();
+			
 			tx.commit();
 
 		}catch(HibernateException e){
@@ -79,26 +80,21 @@ public class TB_TipoSolicitudDAOHibernate extends HibernateDaoSupport implements
 		}	}
 
 	@Override
-	public void borrar(String codigo) throws ASDaoException {
-		TB_TipoSolicitud tipoSol = null;
+	public void borrar(TB_TipoSolicitud tipoSol) throws ASDaoException {
 		org.hibernate.Transaction tx = null;
 		Session session = null;
 		try{
 			session = this.getSessionFactory().openSession();
 
-			tipoSol =(TB_TipoSolicitud)session.load(TB_TipoSolicitud.class, codigo);
-
-			tipoSol.setCodigo(null);
-			tipoSol.setSolicitud(null);
 			tx = session.beginTransaction();
-			
-			session.update(tipoSol);
+
+			session.delete(tipoSol);
 			tx.commit();
 
 		}catch(HibernateException e){
 			throw new ASDaoException(e);
 		}finally {
 			session.close();
-		}	}
-
+		}	
+	}
 }

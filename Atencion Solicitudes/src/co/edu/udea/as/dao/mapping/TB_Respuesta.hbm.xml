@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_Respuesta" table="TB_RESPUESTA">
+    <class name="co.edu.udea.as.dto.TB_Respuesta" table="TB_RESPUESTA" lazy="false">
         <id name="id" type="java.lang.Integer">
             <column name="IN_ID" precision="11"/>
             <generator class="identity" />
@@ -14,7 +14,7 @@
         <property name="fecharespuesta" type="java.util.Date">
             <column name="DT_FECHARESPUESTA" not-null="true"/>
         </property>
-        <many-to-one name="reponsable" class="co.edu.udea.as.dto.TB_Responde" fetch="join">
+        <many-to-one name="reponsable" class="co.edu.udea.as.dto.TB_Responde">
             <column name="VR_REPONSABLE" length="10" not-null="true"/>
         </many-to-one>
     </class>

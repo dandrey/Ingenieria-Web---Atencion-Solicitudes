@@ -69,6 +69,7 @@
 	
 	<bean id="tb_respuestaDao" class="co.edu.udea.as.dao.hibernate.TB_RespuestaDAOHibernate">
 		<property name="sessionFactory" ref="sessionFactory"></property>
+		
 	</bean>
 	
 	<bean id="tb_tiposolicitudDao" class="co.edu.udea.as.dao.hibernate.TB_TipoSolicitudDAOHibernate">

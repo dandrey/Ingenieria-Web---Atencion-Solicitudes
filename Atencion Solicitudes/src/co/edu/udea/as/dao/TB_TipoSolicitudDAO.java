@@ -15,6 +15,6 @@ public interface TB_TipoSolicitudDAO {
 	
 	public void actualizar(TB_TipoSolicitud tipoSol) throws ASDaoException;
 	
-	public void borrar(String codigo) throws ASDaoException;
+	public void borrar(TB_TipoSolicitud tipoSol) throws ASDaoException;
 
 }

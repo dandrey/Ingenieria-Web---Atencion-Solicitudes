@@ -81,18 +81,13 @@ public class TB_ProductosDAOHibernate extends HibernateDaoSupport implements TB_
 	}
 
 	@Override
-	public void borrar(String referencia) throws ASDaoException {
-		TB_Productos producto = null;
+	public void borrar(TB_Productos producto) throws ASDaoException {
 		org.hibernate.Transaction tx = null;
 		Session session = null;
 		try{
 			session = this.getSessionFactory().openSession();
-
-			producto =(TB_Productos)session.load(TB_Productos.class, referencia);
-
 			producto.setEstado(true);
 			tx = session.beginTransaction();
-			
 			session.update(producto);
 			tx.commit();
 

@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_TipoSolicitud" table="TB_TIPOSOLICITUDES">
+    <class name="co.edu.udea.as.dto.TB_TipoSolicitud" table="TB_TIPOSOLICITUDES" lazy="false">
         <id name="codigo" type="java.lang.String">
             <column name="VR_CODIGO" length="10" not-null="true"/>
             <generator class="assigned" />

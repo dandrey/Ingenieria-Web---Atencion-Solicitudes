@@ -16,12 +16,12 @@ public class TB_RespuestaDAOHibernate extends HibernateDaoSupport implements TB_
 
 	@Override
 	public List<TB_Respuesta> lista() throws ASDaoException {
-List<TB_Respuesta> respuestas = new ArrayList<TB_Respuesta>();
-		
+		List<TB_Respuesta> respuestas = new ArrayList<TB_Respuesta>();
+
 		try {
 			Session session = this.getSessionFactory().openSession();
 			Criteria criteria = session.createCriteria(TB_Respuesta.class);
-			
+
 			respuestas = criteria.list();
 		} catch (HibernateException e) {
 			throw new ASDaoException(e);
@@ -41,7 +41,8 @@ List<TB_Respuesta> respuestas = new ArrayList<TB_Respuesta>();
 			throw new ASDaoException(e);
 		}finally {
 			session.close();
-		}		return respuesta;
+		}
+		return respuesta;
 	}
 
 	@Override
@@ -94,10 +95,10 @@ List<TB_Respuesta> respuestas = new ArrayList<TB_Respuesta>();
 			respuesta.setRespuesta(null);
 			respuesta.setFecharespuesta(null);
 			respuesta.setReponsable(null);
-			
+
 			tx = session.beginTransaction();
-			
-			session.update(respuesta);
+
+			session.delete(respuesta);
 			tx.commit();
 
 		}catch(HibernateException e){

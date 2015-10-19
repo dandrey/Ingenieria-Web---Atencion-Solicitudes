@@ -23,7 +23,7 @@
         <property name="estado" type="java.lang.Boolean">
             <column name="BL_ESTADO" precision="1" not-null="false"/>
         </property>
-        <many-to-one name="solicitud" class="co.edu.udea.as.dto.TB_Solicitudes" fetch="join">
+        <many-to-one name="solicitud" class="co.edu.udea.as.dto.TB_Solicitudes">
             <column name="IN_SOLICITUD" precision="11" not-null="true"/>
         </many-to-one>
     </class>

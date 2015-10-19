@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_Responde" table="TB_RESPONDE">
+    <class name="co.edu.udea.as.dto.TB_Responde" table="TB_RESPONDE" lazy="false">
         <id name="id" type="java.lang.String">
             <column name="VR_ID" length="10"/>
             <generator class="assigned" />

@@ -3,33 +3,33 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 18/10/2015 12:56:50 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUD">
+    <class name="co.edu.udea.as.dto.TB_Solicitudes" table="TB_SOLICITUD" lazy="false">
         <id name="codigo" type="java.lang.Integer">
             <column name="IN_CODIGO" precision="11" />
             <generator class="identity" />
         </id>
-        <many-to-one name="tipoSolicitud" class="co.edu.udea.as.dto.TB_TipoSolicitud" fetch="join">
+        <many-to-one name="tipoSolicitud" class="co.edu.udea.as.dto.TB_TipoSolicitud">
             <column name="VR_TIPOSOL" length="10" not-null="true"/>
         </many-to-one>
         <property name="fechaCreacion" type="java.util.Date">
             <column name="DT_FECHACREACION" not-null="true"/>
         </property>
-        <many-to-one name="producto" class="co.edu.udea.as.dto.TB_Productos" fetch="join">
+        <many-to-one name="producto" class="co.edu.udea.as.dto.TB_Productos">
             <column name="VR_PRODUCTO" length="10" not-null="true"/>
         </many-to-one>
-        <many-to-one name="filial" class="co.edu.udea.as.dto.TB_Filiales" fetch="join">
+        <many-to-one name="filial" class="co.edu.udea.as.dto.TB_Filiales">
             <column name="IN_FILIAL" precision="11" not-null="true"/>
         </many-to-one>
         <property name="estado" type="boolean">
             <column name="BL_ESTADO" precision="1" not-null="false"/>
         </property>
-        <many-to-one name="respuesta" class="co.edu.udea.as.dto.TB_Respuesta" fetch="join">
+        <many-to-one name="respuesta" class="co.edu.udea.as.dto.TB_Respuesta">
             <column name="IN_RESPUESTA" precision="11" not-null="false"/>
         </many-to-one>
         <property name="texto" type="java.lang.String">
             <column name="TX_TEXTO" length="1000" not-null="true"/>
         </property>
-        <many-to-one name="encuesta" class="co.edu.udea.as.dto.TB_EncuestaSatisfaccion" fetch="join">
+        <many-to-one name="encuesta" class="co.edu.udea.as.dto.TB_EncuestaSatisfaccion">
             <column name="IN_ENCUESTA" precision="11" not-null="false"/>
         </many-to-one>
     </class>
